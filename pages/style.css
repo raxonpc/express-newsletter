@@ -1,0 +1,16 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sono', sans-serif;
+    font-size: 24px;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, button {
+    font-size: 24px;
+}
