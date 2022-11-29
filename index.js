@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.static('pages', { root: '.' }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
     res.sendFile('index.html');
@@ -30,16 +30,7 @@ app.post("/", async (req, res) => {
         res.redirect('/');
     } catch {
         res.redirect('404.html');
-    } finally {
-        
     }
-})
+});
 
 app.listen(PORT);
-
-
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
