@@ -21,6 +21,7 @@ const limiter = rateLimit({
 app.use(express.static('pages', { root: '.' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(limiter);
 
 app.get("/", (req, res) => {
     res.sendFile('index.html');
